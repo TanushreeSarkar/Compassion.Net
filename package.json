@@ -1,9 +1,0 @@
-{
-  "dependencies": {
-    "bootstrap": "^3.4.1"
-  }
-}
-"resolveSourceMapLocations": [
-  "${workspaceFolder}/**",
-  "!**/node_modules/**"
-],
