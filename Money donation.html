@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #f8042d;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        nav li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        center {
+            text-align: center;
+        }
+
+        h3 {
+            margin-bottom: 20px;
+        }
+
+        .payment-options {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .radio-options label {
+            margin-bottom: 5px;
+        }
+
+        .payment-details {
+            display: none;
+            flex-direction: column;
+            align-items:start;
+        }
+
+        .card-img-top {
+            max-width: 200px;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #34c408;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            background-color: #f8042d;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <title>Donate Money</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Donation Center</h1>
+        <nav>
+            <ul>
+                <li><a href="demo.html">Home</a></li>
+                <li><a href="clothes.html">Clothes</a></li>
+                <li><a href="Donation.html">Food</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <center>
+        <h3>Select Payment Method</h3>
+        
+        <div class="payment-options">
+            <div class="radio-options">
+                <input type="radio" id="card" name="paymentMethod" value="card">
+                <label for="card">Card</label>
+            </div>
+
+            <div class="payment-details" id="cardPayment">
+                <label for="cardNumber">Name on the Card:</label>
+                <input type="text" id="cardName" name="cardName" pattern="text" required>
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" name="cardNumber" pattern="[0-9]{16}" placeholder="XXXX XXXX XXXX XXXX"  required>
+                <label for="cardExpiry">Expiry Date:</label>
+                <input type="month" id="cardExpiry" name="cardExpiry" required>
+                <label for="cardCVV">CVV:</label>
+                <input type="password" id="cardCVV" name="cardCVV" pattern="[0-9]{3}" required>
+            </div>
+
+            <div class="radio-options">
+                <input type="radio" id="upi" name="paymentMethod" value="upi">
+                <label for="upi">UPI</label>
+            </div>
+
+            <div class="payment-details" id="upiPayment">
+                <label for="upiNumber">UPI ID:</label>
+                <input type="text" id="upiNumber" name="upiNumber" required>
+            </div>
+
+            <h3>or Scan the QR CODE:</h3>
+            <img src="C:\Users\Hp\OneDrive\Pictures\WhatsApp Image 2023-12-22 at 15.49.06_d9ad4059.jpg" class="card-img-top" alt="Scan Code">
+        </div>
+        <button type="button" onclick="submitDonation()">Donate Money</button>
+    </center>
+
+    <footer>
+        <p>&copy; 2023 Donation Center</p>
+    </footer>
+
+    <script>
+        const cardPayment = document.getElementById('cardPayment');
+        const upiPayment = document.getElementById('upiPayment');
+        const paymentMethod = document.getElementsByName('paymentMethod');
+
+        for (let i = 0; i < paymentMethod.length; i++) {
+            paymentMethod[i].addEventListener('change', function () {
+                cardPayment.style.display = this.value === 'card' ? 'flex' : 'none';
+                upiPayment.style.display = this.value === 'upi' ? 'flex' : 'none';
+            });
+        }
+
+        function submitDonation() {
+            const amount = document.getElementById('donationAmount').value;
+            const selectedPaymentMethod = document.querySelector('input[name="paymentMethod"]:checked').value;
+
+            if (selectedPaymentMethod === 'card') {
+                const cardNumber = document.getElementById('cardNumber').value;
+                const cardExpiry = document.getElementById('cardExpiry').value;
+                const cardCVV = document.getElementById('cardCVV').value;
+                
+            } else {
+                const upiNumber = document.getElementById('upiNumber').value;
+                
+            }
+        }
+    </script>
+
+    <script src="donation.js"></script>
+</body>
+
+</html>

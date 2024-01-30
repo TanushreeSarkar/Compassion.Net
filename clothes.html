@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Donate clothes, food, and money for a charitable cause.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Clothing Donation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        .blur-image {
+            filter: blur(10px);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+        
+        /* Additional styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f8f9fa; /* Light gray background color */
+        }
+
+        header {
+            background-color: #007bff; /* Primary color for header */
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle box shadow for navigation */
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .navbar-toggler-icon {
+            border-color: white;
+        }
+
+        main {
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand">Clothing Donation</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto"> <!-- Align navigation to the right -->
+                    <li class="nav-item active">
+                        <a class="nav-link" href="demo.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Donation.html">Donate Food</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Money donation.html">Donate Money</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="clothes" class="container mt-5">
+            <h2>Donate Clothes</h2>
+            <form id="clothesForm">
+                <div class="form-group">
+                    <label for="clothesType">Type of Clothes:</label>
+                    <input type="text" class="form-control" id="clothesType" name="clothesType" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="clothesQuantity">Quantity:</label>
+                    <input type="number" class="form-control" id="clothesQuantity" name="clothesQuantity" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="clothesSize">Size:</label>
+                    <input type="text" class="form-control" id="clothesSize" name="clothesSize" required>
+                </div>
+                <div class="background-image">
+                    <img class="blur-image" src="C:\Users\Hp\OneDrive\Desktop\CompassioNET\Compassion.NET\Project(Compassion.Net) - Copy\background-image.jpg" alt="Blurred image">
+                </div>
+                <button type="button" class="btn btn-primary" onclick="submitClothes()" style="margin-top: 15px;">Donate Clothes</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="mt-5">
+        <p>&copy; 2023 Clothing Donation</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="donation.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #f50a51;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        nav li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        section {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+        label {
+            margin-bottom: 10px;
+            display: block;
+            font-weight: bold;
+        }
+
+        select,
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            background-color: #f50a51;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <title>Donation Center</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Donation Center</h1>
+        <nav>
+            <ul>
+                <li><a href="clothes.html">Donate Clothes</a></li>
+                <li><a href="Donation.html">Donate Money</a></li>
+                <li><a href="demo.html">Others</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="food">
+        <h2>Donate Food</h2>
+        <form id="foodForm">
+            <label for="foodType">Type of Food:</label>
+            <select id="foodType" name="foodType" required>
+                <option value="raw">Raw</option>
+                <option value="cooked">Cooked</option>
+                <option value="packed">Packed</option>
+            </select><br>
+            <label for="foodQuantity">Food per head:</label>
+            <input type="number" id="foodQuantity" name="foodQuantity" required><br>
+            <button type="button" onclick="submitFood()">Donate Food</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Donation Center</p>
+    </footer>
+
+    <script src="donation.js"></script>
+</body>
+
+</html>
