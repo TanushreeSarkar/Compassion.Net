@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Donation Center</title>
+    <style>
+        header {
+            background: linear-gradient(to bottom, #343a40, #292b2c);
+        }
+        .blur-image {
+            filter: blur(10px);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #f8f9fa;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="bg-dark text-white text-center py-5">
+        <h1 class="display-3">Donation Center</h1>
+        <p class="text-muted mb-4">Please note that we never ask you for Social Security Numbers or Passwords when making a donation. Should you receive an email or letter asking you for such information, you are requested to inform us at info@CompassioNET.org.<br>Credit card information is required to ensure your credit card is securely and properly processed. This information is solely used for the processing of the credit card and is not stored on our system. If you feel a charge has been made against your credit card inappropriately, please contact us at info@CompassioNET.org</p>
+    </header>
+    
+    <section class="container mt-4">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="C:\Users\Hp\OneDrive\Pictures\food.jpg" class="card-img-top" alt="Food Donation">
+                    <div class="card-body">
+                        <h5 class="card-title">Food Donation</h5>
+                        <p class="card-text">Donate food to help those in need.</p>
+                        <a href="Donation.html" class="btn btn-primary">Donate</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="C:\Users\Hp\OneDrive\Pictures\WhatsApp Image 2023-12-26 at 16.29.31_fd4e4afb.jpg" class="card-img-top" alt="Clothes Donation">
+                    <div class="card-body">
+                        <h5 class="card-title">Clothes Donation</h5>
+                        <p class="card-text">Provide clothes to those in need.</p>
+                        <a href="clothes.html" class="btn btn-primary">Donate</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="C:\Users\Hp\OneDrive\Pictures\money.jpg" class="card-img-top" alt="Money Donation">
+                    <div class="card-body">
+                        <h5 class="card-title">Money Donation</h5>
+                        <p class="card-text">Contribute financially to make a difference.</p>
+                        <a href="Money donation.html" class="btn btn-primary">Donate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="background-image">
+            <img class="blur-image" src="C:\Users\Hp\OneDrive\Desktop\CompassioNET\Compassion.NET\Project(Compassion.Net) - Copy\background-image.jpg" alt="Blurred image">
+        </div>
+    </section>
+
+    <footer class="bg-secondary text-white text-center py-3 fixed-bottom">
+        <p>&copy; 2023 Donation Center</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
