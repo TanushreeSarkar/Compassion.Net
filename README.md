@@ -1,0 +1,1 @@
+This repository contains the codes for my 2nd Year college mini project titled CompassionNet. CompassionNet allows users to donate seamlessly to donate items of their choice like clothes, food and money to NGOs of their choice.
